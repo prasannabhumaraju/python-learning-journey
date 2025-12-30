@@ -59,7 +59,7 @@ else:
     print('not in order')'''
 
 #Login with attempt limit
-for atmpt in range(1,4):
+'''for atmpt in range(1,4):
     user=input('user:')
     pwd=input('pwd:')
     if user=='admin' and pwd=='2300':
@@ -67,4 +67,21 @@ for atmpt in range(1,4):
     else:
         print(atmpt,'try again')
 else:
-    print('account locked')
+    print('account locked')'''
+#A bank allows a withdrawal only if all of the following are true:
+
+# The account is active
+
+# The withdrawal amount is a multiple of 100
+
+# The withdrawal amount is ≤ account balance
+
+# After withdrawal, minimum balance of ₹500 must remain
+balance=10000
+amount=int(input('enter a num:'))
+if amount<=balance and amount%100==0:
+    withdrawn=balance-amount
+    if balance>=500:
+      print(withdrawn,"is withdrawn")
+else:
+   print('insufficent or invalid ')
